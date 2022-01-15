@@ -1,0 +1,51 @@
+package selfProgramming;
+import java.util.Scanner;
+public class Alphabet {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner scan = new Scanner(System.in);
+		
+		for (int i=0; i>=0;i++) {
+	
+		
+		System.out.println("Input a alphabet: ");
+		String input = scan.next();
+		
+		boolean uppercase = input.charAt(0) >= 65 && input.charAt(0) <= 90;
+		boolean lowercase = input.charAt(0) >= 97 && input.charAt(0) <= 122;
+		boolean vowels = input.equals("a") || input.equals("e") || input.equals("i")
+				|| input.equals("o") || input.equals("u");
+		
+		if (input.length() > 1) {
+			System.out.println("ERROR!! Please input single character.");
+		}
+		else if(!(uppercase || lowercase)){
+			System.out.println("ERROR!! Not a letter. Enter uppercase or lowercase letter.");
+		}
+		else if(vowels) {
+			System.out.println("Input letter is Vowel.");
+		}
+		else {
+			System.out.println("Input letter is Consonant.");
+		}
+		System.out.println();
+	}
+	}
+}
+
+Output:
+Input a alphabet: 
+1
+ERROR!! Not a letter. Enter uppercase or lowercase letter.
+
+Input a alphabet: 
+a
+Input letter is Vowel.
+
+Input a alphabet: 
+w
+Input letter is Consonant.
+
+Input a alphabet: 
