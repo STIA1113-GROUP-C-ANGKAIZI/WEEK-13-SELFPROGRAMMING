@@ -1,0 +1,35 @@
+package selfProgramming;
+import java.util.Scanner;
+public class WeekDay {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner scan = new Scanner (System.in);
+		System.out.println("Please input a number: ");
+		int number = scan.nextInt();
+		
+		System.out.println(day(number));
+	}
+	
+	public static String day(int number) {
+		String DayName = "";
+		switch (number) {
+		case 1: DayName = "Monday"; break;
+		case 2: DayName = "Tuesday"; break;
+		case 3: DayName = "Wesnesday"; break;
+		case 4: DayName = "Thusday"; break;
+		case 5: DayName = "Friday"; break;
+		case 6: DayName = "Saturday"; break;
+		case 7: DayName = "Sunday"; break;
+		default: DayName = "Invalid day range";
+		}
+		return DayName;
+	}
+
+}
+
+Output:
+Please input a number: 
+1
+Monday
