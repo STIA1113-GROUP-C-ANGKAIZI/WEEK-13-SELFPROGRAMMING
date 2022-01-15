@@ -1,0 +1,83 @@
+package selfProgramming;
+import java.util.Scanner;
+public class DaysInMonth {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner scan = new Scanner (System.in);
+		
+		int numberOfDays = 0;
+		String MonthName = "Unknown";
+		
+		System.out.println("Please input a month number: ");
+		int month = scan.nextInt();
+		
+		System.out.println("Please input a year: ");
+		int year = scan.nextInt();
+		
+		switch (month) {
+		case 1:
+			MonthName = "January";
+			numberOfDays = 31;
+			break;
+		case 2:
+			MonthName = "February";
+			if ((year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0))){
+				numberOfDays = 29;
+			}else {
+				numberOfDays = 28;
+			}
+			break;
+		case 3:
+			MonthName = "March";
+			numberOfDays = 31;
+			break;
+		case 4:
+			MonthName = "April";
+			numberOfDays = 30;
+			break;
+		case 5:
+			MonthName = "May";
+			numberOfDays = 31;
+			break;
+		case 6:
+			MonthName = "Jun";
+			numberOfDays = 30;
+			break;
+		case 7:
+			MonthName = "July";
+			numberOfDays = 31;
+			break;
+		case 8:
+			MonthName = "August";
+			numberOfDays = 31;
+			break;
+		case 9:
+			MonthName = "September";
+			numberOfDays = 30;
+			break;
+		case 10:
+			MonthName = "October";
+			numberOfDays = 31;
+			break;
+		case 11:
+			MonthName = "November";
+			numberOfDays = 30;
+			break;
+		case 12:
+			MonthName = "Disember";
+			numberOfDays = 31;
+			break;
+		}
+		System.out.println(MonthName + " " + year + " has " + numberOfDays + " days.");
+	}
+
+}
+
+Output:
+Please input a month number: 
+2
+Please input a year: 
+2016
+February 2016 has 29 days.
