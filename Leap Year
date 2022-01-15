@@ -1,0 +1,35 @@
+package selfProgramming;
+import java.util.Scanner;
+public class LeapYear {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner scan = new Scanner (System.in);
+		System.out.println("Enter a year: ");
+		int year = scan.nextInt();
+		
+		boolean a = (year % 4) == 0;
+		boolean b = (year % 100) != 0;
+		boolean c = ((year % 100 == 0) && (year % 400 == 0));
+		
+		if (a && (b || c))
+		{
+			System.out.println(year + " is a leap year.");
+		}
+		else {
+			System.out.println(year + " is not a leap year.");
+		}
+	}
+
+}
+
+Output:
+Enter a year: 
+2016
+2016 is a leap year.
+
+Output2:
+Enter a year: 
+2017
+2017 is not a leap year.
