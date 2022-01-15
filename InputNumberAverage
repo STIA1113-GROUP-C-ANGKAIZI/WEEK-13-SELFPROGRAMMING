@@ -1,0 +1,31 @@
+package selfProgramming;
+import java.util.Scanner;
+public class InputNumberAverage {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num = 0, sum = 0; double average;
+		
+		Scanner scan = new Scanner (System.in);
+		System.out.println("Enter five number :");
+		
+		for (int i = 1; i<=5; i++) {
+			num = scan.nextInt();
+			sum += num;
+		}
+		
+		average = sum/5;
+		
+		System.out.println("Sum of these five number is " +sum+ " and average is " +average);
+	}
+
+}
+
+Output:
+Enter five number :
+1
+2
+3
+4
+5
+Sum of these five number is 15 and average is 3.0
