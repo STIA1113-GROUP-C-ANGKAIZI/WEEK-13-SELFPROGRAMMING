@@ -1,0 +1,35 @@
+package selfProgramming;
+import java.util.Scanner;
+public class SumFirstNaturalNumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//Write a program in Java to display n terms of natural numbers and their sum.
+		int sum = 0;
+		Scanner scan = new Scanner (System.in);
+		System.out.println("Enter a number: ");
+		int num = scan.nextInt();
+		
+		System.out.println("The first natural number is " + num);
+		
+		for (int i=1; i<=num; i++) {
+			System.out.println(i);
+			sum += i;
+		}
+		
+		System.out.println("The sum of natural number upto " +num+ " terms : " + sum);
+	}
+
+}
+
+Output:
+Enter a number: 
+5
+The first natural number is 5
+1
+2
+3
+4
+5
+The sum of natural number upto 5 terms : 15
