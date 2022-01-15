@@ -1,0 +1,46 @@
+package selfProgramming;
+import java.util.Scanner;
+public class DifferentFloatingNumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//Write a Java program that reads in two floating-point numbers and tests whether they are the same up to three decimal places.
+
+		//Test Data
+		//Input floating-point number: 25.586
+		//Input floating-point another number: 25.589
+		
+		Scanner scan = new Scanner (System.in);
+		System.out.print("Please input floating-point number: ");
+		double a = scan.nextDouble();
+		System.out.print("Please input another floating-point number: ");
+		double b = scan.nextDouble();
+		
+		a = Math.round(a * 1000);
+		a = a / 1000;
+		
+		b = Math.round(b * 1000);
+		b = b / 1000;
+				
+		if (a == b) 
+		{
+			System.out.println("They are the same up to three decimal places");
+		}
+		else 
+		{
+			System.out.println("They are different");
+		}
+	}
+
+}
+
+Output1:
+Please input floating-point number: 25.586
+Please input another floating-point number: 25.589
+They are different
+
+Output2:
+Please input floating-point number: 25.222
+Please input another floating-point number: 25.222
+They are the same up to three decimal places
